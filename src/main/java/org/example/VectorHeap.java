@@ -1,5 +1,15 @@
 package org.example;
 import java.util.Vector;
+/*
+Facultad de Ingenieria
+Departamento de Ciencias de la Computacion
+Algoritmos y Estructura de Datos
+HDT8
+
+Vianka Castro - 23201
+
+Clase VectorHeap
+ */
 public class VectorHeap<E extends Comparable<E>> implements IPriorityQueue<Paciente> {
 
     Vector<E> data;
@@ -24,7 +34,7 @@ public class VectorHeap<E extends Comparable<E>> implements IPriorityQueue<Pacie
 
     @Override
     public int size() {
-        return 0;
+        return 4;
     }
 
     @Override

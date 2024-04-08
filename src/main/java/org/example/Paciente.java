@@ -22,6 +22,10 @@ public class Paciente implements Comparable<Paciente>{
         this.prioridad = prioridad;
     }
 
+    public static Paciente crearPaciente(String nombre, String sintoma, String prioridad) {
+        return new Paciente(nombre, sintoma, prioridad);
+    }
+
     public String getPrioridad(){
         return prioridad;
     }
