@@ -46,6 +46,7 @@ public class Main {
         }
 
         boolean continuar = true;
+
         while (continuar) {
 
             System.out.println("¿Qué acción desea realizar?");
@@ -89,6 +90,7 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Mostrando lista de pacientes:");
+                    System.out.println("Total de pacientes actuales: " + pacienteQueue.size());
                     System.out.println("--------------------------");
 
                     if (pacientes.isEmpty()) {
@@ -135,14 +137,24 @@ public class Main {
                         }
                     }
                     break;
+                case 5:
+                    System.out.println("Gracias por usar el gestor de pacientes.");
+                    pacienteQueue.clear();
+                    continuar = false;
+                    break;
                 default:
                     System.out.println("Opción no válida.");
             }
         }
-        System.out.println("Gracias por usar el gestor de pacientes.");
+
     }
 
-
+    /**
+     * Carga pacientes desde un archivo de texto en una cola de prioridad y una lista.
+     *
+     * @param pacienteQueue La cola de prioridad donde se agregarán los pacientes.
+     * @param pacientes La lista donde se agregarán los pacientes.
+     */
     private static void cargarPacientesDesdeArchivo(IPriorityQueue<Paciente> pacienteQueue,List<Paciente> pacientes) {
         InputStream inputStream = Main.class.getClassLoader().getResourceAsStream("pacientes.txt");
         Scanner scanner = new Scanner(inputStream);
