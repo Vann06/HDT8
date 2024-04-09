@@ -7,7 +7,7 @@ HDT8
 
 Vianka Castro - 23201
 
-Clase Main para interactuar
+Clase Main para interactuar con el usuario
  */
 
 import java.io.InputStream;
